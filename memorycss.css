@@ -1,0 +1,211 @@
+/*CSS-DOKUMENT*/
+* {
+	margin: 0px;
+	height: 100%;
+}
+
+body{
+	background-image: url("image/BG2.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	image-rendering: pixelated;
+
+	overflow: hidden;
+}
+
+
+#SP {
+	float: left;
+	border-right: 0.3vw solid;
+	padding-right: 2vw;
+}
+#MP {
+	border-left: 0.3vw solid;
+	float: right;
+	padding-left: 2vw;
+	margin-right: 1.75vw; 
+}
+.PAGE {
+	text-align: center;
+	/*border: 1px solid;*/
+	width: 45%;
+
+	color: #554422;
+	font-size: 4vw;
+	font-family: Calibri;
+	line-height: 4vw;
+}
+.PAGE p{
+	float: left;
+	height: 3vw;
+	width: 10vw;
+	font-size: 2vw;
+	line-height: 2vw;
+	font-weight: bold;
+}
+.TXField {
+	width: 22vw;
+	height: 2vw;
+	float: left;
+	background-color: #e8dab9;
+	border: 1px solid #FFFFFF;
+	font-size: 1.5vw;
+	padding-left: 1vw;
+	font-family: Calibri;
+	color: #776644;
+}
+
+.StartButton {
+	width: 25vw;
+	height: 5vw;
+	margin-top: -1vw;
+	background-color: #f0cc66;
+	border: 0.1vw solid #FFFFFF;
+	font-size: 3.5vw;
+	font-family: Calibri;
+	color: #776644;
+}
+
+
+
+#MasteryHUD{
+	width: 80%;
+	height: 5vw;
+	margin-left: auto;
+	margin-right: auto;
+
+	position: relative;
+	top: -10vw;
+}
+#LeftHUD {
+	width: 39vw;
+	height: 4vw;
+
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+
+	margin-top: 0.5vw;
+
+	background-image: url("image/HUDTurn.png");
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+	background-size: 100% 100%;
+}
+
+#RightHUD {
+	width: 39vw;
+	height: 4vw;
+
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+
+	margin-top: 0.5vw;
+	background-image: url("image/HUD.png");
+	background-repeat: no-repeat;
+	image-rendering: pixelated;
+	background-size: 100% 100%;
+}
+
+.HUD {
+	font-family: Calibri;
+	font-size: 2.5vw;
+	line-height: 4vw;
+}
+.HUD p {
+	float: left;
+	margin-left: 1vw;
+	margin-right: 3vw;
+}
+
+
+#GameBoard {
+	width: 81vw;
+	height: 41vw;
+
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("image/GameBoard.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	image-rendering: pixelated;
+	padding-left: 1.75vw;
+	padding-top: 0.75vw;
+	padding-bottom: 0.75vw;	/*ADDED THIS? POSSIBLE BREAK!*/
+}
+
+
+.Card {
+	width: 6.1vw;
+	height: 6.1vw;
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
+	margin-top: 1vw;
+	float: left;
+}
+
+.Card img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+#Popup {
+	width: 40vw;
+	height: 20vw;
+
+	margin-left: auto;
+	margin-right: auto;
+	image-rendering: pixelated;
+}
+
+#ButtonParent {
+	width: 40vw;
+	height: 10vw;
+	margin-top: 1vw;
+	margin-left: -2.5vw;
+	margin-right: auto;
+	text-align: center;
+}
+
+#ButtonParent a {
+	font-size: 2vw;
+	font-family: Calibri, sans-serif;
+}
+
+#ButtonParent img {
+	width: 10vw;
+	height: 4vw;
+	padding-bottom: -10vw;
+}
+
+#MPDif {
+	width: 8vw;
+	height: 3.2vw;
+	position: absolute;
+	margin-top: -5vw;
+	margin-left: 8vw;
+	border: 0.2vw solid #776644;
+	border-radius: 1vw;
+	background-color: #776644;
+}
+
+
+#Cheat {
+	position: absolute;
+	top: 18vh;
+	right: 3vw;
+
+	font-family: Calibri;
+	font-size: 1.75vw;
+	color: #302319;
+
+	box-shadow: none;
+	background: transparent;
+}
+
+#Cheat::Selection{
+	background: transparent;
+}

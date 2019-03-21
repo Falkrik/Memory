@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="memorycss.css">
+	<script type="text/javascript" src="memoryjs.js"></script>
+	<title>MEMORYES</title>
+</head>
+<body onkeyup="Cheatmode(event)">
+	<div id="PlayScene">		
+		<div id="MasteryHUD" class="HUD">	
+			<div id="LeftHUD" class="HUD">
+				<p>P1</p>
+				<p>SCORE: 0</p>
+			</div>
+			<div id="RightHUD">
+				<p>P2</p>
+				<p>SCORE: 0</p>
+			</div>
+		</div>
+
+		<div id="GameBoard">
+			<div id="OptionsPane">
+				<div id="SP" class="PAGE">
+					SINGLEPLAYER
+				</div>
+
+				<div id="MP" class="PAGE">
+					MULTIPLAYER
+					<br><br>
+					<p>PLAYER 1</p><input type="textfield" maxlength="10" value="Player_1" class="TXField" id="P1Name"> <br>
+					<p>PLAYER 2</p><input type="textfield" maxlength="10" value="Player_2" class="TXField" id="P2Name">	
+					<br><br>
+					<p>ATTEMPTS</p>
+					<input type="textfield" id="Attempt" class="TXField" onkeypress='return event.charCode >= 48 && event.charCode <= 57'><br>
+
+					<div id="ButtonParent">
+						<a onclick="setDif(1)"><img src="image/EasyButton.png" draggable="false"></a>
+						<a onclick="setDif(2)"><img src="image/MediumButton.png" draggable="false"></a>
+						<a onclick="setDif(3)"><img src="image/HardButton.png" draggable="false"></a>		
+					</div>
+
+					<img src="image/EasyButton.png" id="MPDif" draggable="false">
+
+					<input type="button" onclick="MPStart()" value="START GAME" class="StartButton">		
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<p id="Cheat"></p>
+
+
+</body>
+</html>
