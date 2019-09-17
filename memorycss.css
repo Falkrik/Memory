@@ -132,7 +132,7 @@ body{
 	image-rendering: pixelated;
 	padding-left: 1.75vw;
 	padding-top: 0.75vw;
-	padding-bottom: 0.75vw;	/*ADDED THIS? POSSIBLE BREAK!*/
+	padding-bottom: 0.75vw;	
 }
 
 
@@ -165,28 +165,21 @@ body{
 	width: 40vw;
 	height: 10vw;
 	margin-top: 1vw;
-	margin-left: -2.5vw;
 	margin-right: auto;
 	text-align: center;
 }
 
-#ButtonParent a {
-	font-size: 2vw;
-	font-family: Calibri, sans-serif;
-}
-
-#ButtonParent img {
-	width: 10vw;
+.changeBTN {
+	width: 4vw;
 	height: 4vw;
-	padding-bottom: -10vw;
+
+	margin-left: 1vw;
+	margin-right: 1vw;
 }
 
 #MPDif {
 	width: 8vw;
 	height: 3.2vw;
-	position: absolute;
-	margin-top: -5vw;
-	margin-left: 8vw;
 	border: 0.2vw solid #776644;
 	border-radius: 1vw;
 	background-color: #776644;
@@ -208,4 +201,10 @@ body{
 
 #Cheat::Selection{
 	background: transparent;
+}
+
+#hidden {
+	width: 0px;
+	position: absolute;
+	top: 0;
 }

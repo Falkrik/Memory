@@ -28,17 +28,38 @@ var P2Score = 0;
 
 var cheating = false;
 
-setInterval(Cloud, 20);
+var preloadNum = 1;
+//setInterval(Cloud, 20);
+var sav = setInterval(preload, 10);
 
+
+	//Den här funktionen laddar in alla bilder som används för att inte
+	//ha någon delay under matchen.
+function preload() {
+	var hidIMG = document.getElementById("hidden");
+	hidIMG.src = "image/Card" + preloadNum + ".png";
+	preloadNum++;
+
+	if(preloadNum == 37){
+		clearInterval(sav);
+	}
+
+}
 
 
 	//Den här funktionen byter vilken svårighetsgrad som har valts.
 	//Svårighetsgraden byter hur många kort som används.
 function setDif(dif){
-	mode = dif;
+	mode += dif;
+	if(mode <= 0){
+		mode = 1;
+	} else if (mode >= 5){
+		mode = 4;
+	}
+
 	var MPDif = document.getElementById("MPDif");
 
-	switch(dif){
+	switch(mode){
 		case 1:
 			MPDif.src = "image/EasyButton.png";
 			break;
@@ -47,6 +68,9 @@ function setDif(dif){
 			break;
 		case 3:
 			MPDif.src = "image/HardButton.png";
+			break;
+		case 4:
+			MPDif.src = "image/insaneButton.png"
 			break;
 	}
 }
@@ -84,6 +108,9 @@ function CreateBoard(){
 		case 3:
 			cards = 50;
 			break;
+		case 4:
+			cards = 72;
+			break;
 	}
 
 
@@ -115,6 +142,10 @@ function CreateBoard(){
 
 		if(mode == 3){
 			cWidth = 6.95;
+		}
+
+		if(mode == 4) {
+			cWidth = 5.6;
 		}
 			newDiv.style.width = cWidth + "vw";
 			newDiv.style.height = cWidth + "vw";
@@ -378,6 +409,8 @@ function CheatFindPair()
 					case 50:
 						document.getElementById("Cheat").innerHTML = (i%10 +1) +  ", " + (Math.floor(i/10) + 1);
 						break;
+					case 72:
+						document.getElementById("Cheat").innerHTML = (i%12 +1) +  ", " + (Math.floor(i/12) + 1);
 				}
 			}
 		}
