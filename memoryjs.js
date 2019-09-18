@@ -70,7 +70,7 @@ function setDif(dif){
 			MPDif.src = "image/HardButton.png";
 			break;
 		case 4:
-			MPDif.src = "image/insaneButton.png"
+			MPDif.src = "image/InsaneButton.png"
 			break;
 	}
 }
