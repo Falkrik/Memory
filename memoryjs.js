@@ -54,7 +54,7 @@ function setDif(dif){
 	if(mode <= 0){
 		mode = 1;
 	} else if (mode >= 5){
-		mode = 4;
+		mode = 5;
 	}
 
 	var MPDif = document.getElementById("MPDif");
@@ -72,6 +72,8 @@ function setDif(dif){
 		case 4:
 			MPDif.src = "image/InsaneButton.png"
 			break;
+		case 5:
+			MPDif.src = "image/CrazyButton.png";
 	}
 }
 
@@ -98,19 +100,21 @@ function CreateBoard(){
 	moveInterval = setInterval(MovePopup, 5);
 	switch(mode){
 		case 1: 
-			cards = 18;
+			cards = 18;		//6x3
 			break;
 
 		case 2:
-			cards = 32;
+			cards = 32;		//8x4
 			break;
 
 		case 3:
-			cards = 50;
+			cards = 50;		//10x5
 			break;
 		case 4:
-			cards = 72;
+			cards = 72;		//12x6
 			break;
+		case 5:
+			cards = 98;		//14x7
 	}
 
 
@@ -146,6 +150,10 @@ function CreateBoard(){
 
 		if(mode == 4) {
 			cWidth = 5.6;
+		}
+
+		if(mode == 5) {
+			cWidth = 4.65;
 		}
 			newDiv.style.width = cWidth + "vw";
 			newDiv.style.height = cWidth + "vw";
@@ -409,8 +417,14 @@ function CheatFindPair()
 					case 50:
 						document.getElementById("Cheat").innerHTML = (i%10 +1) +  ", " + (Math.floor(i/10) + 1);
 						break;
+
 					case 72:
 						document.getElementById("Cheat").innerHTML = (i%12 +1) +  ", " + (Math.floor(i/12) + 1);
+						break;
+
+					case 98:
+						document.getElementById("Cheat").innerHTML = (i%12 + 1) + ", " + (Math.floor(i/12) + 1);
+						break;
 				}
 			}
 		}
